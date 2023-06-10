@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Part2</title>
+</head>
+<style>
+    .wufoo {
+        font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+    }
+</style>
+<body>
+<!-- Đây là code form phần 2 -->
+
+<form method="get" action="simpleform.html" class = "wufoo">
+    <h1 style="background-color: cadetblue " id="1">ĐĂNG KÍ HỌC VIÊN</h1>
+    <table bgcolor="#EEE8AA">
+        <tr>
+            <td style="color: cadetblue">Họ và tên</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td style="color: cadetblue">Ngày sinh</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td style="color: cadetblue">Giới tính</td>
+            <td><input style="color: black" type="radio" id="male" name="Giói tính" value="Nam">
+                <label for="male">Nam</label>
+                <input style="color: black" type="radio" id="female" name="Giới tính" value="Nữ">
+                <label for="female">Nữ</label></td>
+        </tr>
+        <tr>
+            <td style="color: cadetblue">Địa chỉ</td>
+            <td><textarea cols="30" rows="4">Ghi vào đây</textarea></td>
+        </tr>
+        <tr>
+            <td style="color: cadetblue">Lớp</td>
+            <td>
+
+                <select name="lop" id="lop">
+                    <option value="">--chọn lớp--</option>
+                    <option value="Java">Java</option>
+                    <option value="C++">C++</option>
+                    <option value="PHP">PHP</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td style="color: cadetblue">Email</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td style="color: cadetblue">Điện thoại</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Đăng ký"> <input type="reset" value="Nhập lại"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
