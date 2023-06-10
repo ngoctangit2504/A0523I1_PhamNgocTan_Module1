@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form don gian</title>
+</head>
+<style>
+    .wufoo {
+        font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+    }
+</style>
+<body>
+
+<!--Đây là code form phần 1-->
+
+<form method="get" action="simpleform.html" class = "wufoo">
+    <center>
+        <h1 style="background-color: red"> SỞ THÍCH CỦA BẠN</h1>
+        <table>
+            <tr>
+                <th style="color: cornflowerblue" align="right">Họ và tên</th>
+                <td colspan="2"><input type="text"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th style="color: cornflowerblue" align="right">Email</th>
+                <td colspan="2"><input type="text"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th style="color: cornflowerblue" align="right">Sở thích</th>
+                <td><input type="checkbox" id="sothich1" name="sothich1" value="sport">
+                    <label for="sothich1">Thể thao</label></td>
+                <td><input type="checkbox" id="sothich2" name="sothich2" value="sport">
+                    <label for="sothich2">Âm nhạc</label></td>
+                <td><input type="checkbox" id="sothich3" name="sothich3" value="sport">
+                    <label for="sothich3">Đọc sách</label></td></tr></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" id="sothich4" name="sothich4" value="sport">
+                    <label for="sothich4">Lướt web</label></td>
+                <td><input type="checkbox" id="sothich5" name="sothich5" value="sport">
+                    <label for="sothich5">Chới game</label></td>
+                <td><input type="checkbox" id="sothich6" name="sothich6" value="sport">
+                    <label for="sothich6">Điện Ảnh</label></td></tr></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" id="sothich7" name="sothich7" value="sport">
+                    <label for="sothich7">Du lịch</label></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2"><input type="submit" value="Gửi thông tin"> <input type="reset" value="Nhập lại"></td>
+            </tr>
+        </table>
+     </center>
+    </form>
+
+<br><br>
+
+<!-- Đây là code form phần 2 -->
+
+<form method="get" action="simpleform.html" class = "wufoo">
+    <h1 style="background-color: cadetblue " id="1">ĐĂNG KÍ HỌC VIÊN</h1>
+    <table bgcolor="#EEE8AA">
+        <tr>
+            <td style="color: cadetblue">Họ và tên</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td style="color: cadetblue">Ngày sinh</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td style="color: cadetblue">Giới tính</td>
+            <td><input style="color: black" type="radio" id="male" name="Giói tính" value="Nam">
+                <label for="male">Nam</label>
+                <input style="color: black" type="radio" id="female" name="Giới tính" value="Nữ">
+                <label for="female">Nữ</label></td>
+        </tr>
+        <tr>
+            <td style="color: cadetblue">Địa chỉ</td>
+            <td><textarea cols="30" rows="4">Ghi vào đây</textarea></td>
+        </tr>
+        <tr>
+            <td style="color: cadetblue">Lớp</td>
+            <td>
+
+                <select name="lop" id="lop">
+                <option value="">--chọn lớp--</option>
+                <option value="Java">Java</option>
+                <option value="C++">C++</option>
+                <option value="PHP">PHP</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td style="color: cadetblue">Email</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td style="color: cadetblue">Điện thoại</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Đăng ký"> <input type="reset" value="Nhập lại"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
