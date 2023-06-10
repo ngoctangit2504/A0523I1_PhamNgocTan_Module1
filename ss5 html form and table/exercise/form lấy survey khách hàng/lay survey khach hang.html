@@ -4,26 +4,39 @@
     <meta charset="UTF-8">
     <title>Khach Hang</title>
 </head>
+<style>
+    table, th, td{
+        border:1px solid #868585;
+    }
+    table{
+        border-collapse:collapse;
+        width:100%;
+    }
+    table tr:nth-child(odd){
+        background-color:#eee;
+    }
+    table tr:nth-child(even){
+        background-color:white;
+    }
+    table tr:nth-child(1){
+        background-color:#eee;
+    }
+    .wufoo {
+        font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+    }
+</style>
 <body>
+<form method="get" action="simpleform.html" class = "wufoo">
 <h2>Market Research Survey</h2>
 <p>Please take a few moments to complete this satisfaction survey.</p>
 <hr>
 
 <h4>What is your age range?</h4>
-<select name="age" id="age"  >
-    <option value="">10-17</option>
-    <option value="" selected>18-24</option>
-    <option value="">25-30</option>
-    <option value="">30-35</option>
-</select>
+<input type="number" name="quantity" min="18" max="24" style="width: 300px">
 
 <h4>What is your yearly income range?</h4>
-<select name="age" id="age"  >
-    <option value="" selected>$0-$25000</option>
-    <option value="">$25500-$50000</option>
-    <option value="">$50500-75500</option>
-    <option value="">$80000-$100000</option>
-</select>
+<input type="number" name="quantity" min="0" max="25000" style="width: 300px">
+
 
 <h4>Gender</h4>
 <input name="geder" type="radio" value="Male"/>Male<br>
@@ -42,7 +55,9 @@
 <input name="new product" type="radio" value="weekly"/>Weekly<br>
 <input name="new product" type="radio" value="monthly"/>Monthly
 
-<h4>What features would you like to see in the new product.</h4>
+<h4>What would you pay for the new product.</h4>
+$<input type="number" style="width: 50px">.<input type="number" style="width: 10px">
+
 
 <h4>What feature would you like to see in the new product</h4>
 <textarea rows="8" cols="100">
@@ -50,34 +65,38 @@
 </textarea>
 
 <p>Please rate your level of agreement with th following statements.</p>
-<table border="1">
+<table  border="1">
     <tr>
         <th></th>
-        <th>Strongly Disagree</th>
-        <th>Disagree</th>
-        <th>Agree</th>
+        <th width="180px">Strongly Disagree</th>
+        <th width="180px">Disagree</th>
+        <th width="180px">Agree</th>
+        <th width="180px">Strongly Disagree</th>
     </tr>
     <tr>
         <th><h4>Our products are priced fairly.</h4></th>
-        <th><input type="radio"><br>1</th>
-        <th><input type="radio"><br>2</th>
-        <th><input type="radio"><br>3</th>
+        <th><input type="radio" name="num1"><br>1</th>
+        <th><input  type="radio" name="num1"><br>2</th>
+        <th><input type="radio" name="num1"><br>3</th>
+        <th><input type="radio" name="num1"><br>4</th>
     </tr>
     <tr>
         <th><h4>Our product are hight quality.</h4></th>
-        <th><input type="radio"><br>1</th>
-        <th><input type="radio"><br>2</th>
-        <th><input type="radio"><br>3</th>
+        <th><input  type="radio" name="num2"><br>1</th>
+        <th><input  type="radio" name="num2"><br>2</th>
+        <th><input  type="radio" name="num2"><br>3</th>
+        <th><input  type="radio" name="num2"><br>4</th>
     </tr>
     <tr>
         <th>You would recommend our product to a friend or coworker</th>
-        <th><input type="radio"><br>1</th>
-        <th><input type="radio"><br>2</th>
-        <th><input type="radio"><br>3</th>
+        <th><input  type="radio" name="num3"><br>1</th>
+        <th><input  type="radio" name="num3"><br>2</th>
+        <th><input type="radio" name="num3"><br>3</th>
+        <th><input  type="radio" name="num3"><br>4</th>
     </tr>
 </table>
 <br>
 <input type="submit">
-
+</form>
 </body>
 </html>
