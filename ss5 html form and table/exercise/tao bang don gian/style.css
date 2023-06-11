@@ -1,0 +1,10 @@
+body {
+    padding: 50px;
+    text-align: center;
+    font-family: "Book Antiqua"
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align-all: justify;
+}
