@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai1</title>
+</head>
+<body>
+<h3>Chao cac ban(-_-)</h3>
+<script>
+    let vatly;
+    let hoahoc;
+    let sinhhoc;
+
+    vatly = prompt("Nhập điểm vật lý đi");
+    hoahoc = prompt("Nhập điểm hóa học đi");
+    sinhhoc = prompt("Nhập điểm sinh học đi");
+
+    let  ly = parseFloat(vatly);
+    let hoa = parseFloat(hoahoc);
+    let sinh = parseFloat(sinhhoc);
+    let diemtb = ((ly+hoa+sinh)/3);
+
+    document.write("Điểm vật lý là:" + ly);
+    document.write("<br/>");
+    document.write("Điểm hóa học là:" + hoa);
+    document.write("<br/>");
+    document.write("Điểm sinh học là:" + sinh);
+    document.write("<br/>");
+    document.write("Điểm trung bình là:" + diemtb);
+</script>
+</body>
+</html>
