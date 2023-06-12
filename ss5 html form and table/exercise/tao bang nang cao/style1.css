@@ -1,0 +1,12 @@
+body{
+    background-color: orange;
+    font-family: "Berlin Sans FB";
+}
+table{
+     border-collapse: collapse;
+}
+td{
+    height: 68px;
+    width: 68px;
+    border: aliceblue;
+}

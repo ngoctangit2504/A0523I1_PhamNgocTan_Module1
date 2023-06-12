@@ -1,0 +1,11 @@
+body{
+
+}
+table{
+ border-collapse: collapse;
+    border-color: dimgray;
+}
+tr {
+    height: 50px;
+    width: 100px;
+}
