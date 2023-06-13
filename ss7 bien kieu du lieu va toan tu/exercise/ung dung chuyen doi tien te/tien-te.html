@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi</title>
+
+</head>
+
+<body>
+<form >
+    <table>
+        <tr>
+            <th >Amount</th>
+            <th >From Currency</th>
+            <th >To Currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="nhapvao">
+            </td>
+            <td>
+                <select name="" id="se1">
+                    <option value="vnd">VietNam</option>
+                    <option value="usd">USD</option>
+                </select>
+            </td>
+            <td>
+                <select name="" id="se2">
+                    <option value="usd">USD</option>
+                    <option value="vnd">VietNam</option>
+                </select>
+            </td>
+            <td>
+                <button style="background-color: blueviolet" onclick="bamvao()">Convert</button>
+            </td>
+        </tr>
+    </table>
+
+<script>
+    function bamvao() {
+        let giatrinhap = document.getElementById('nhapvao').value;
+        let se1 = document.getElementById('se1').value;
+        let se2 = document.getElementById('se2').value;
+
+        if (se1 == se2) {
+            
+            document.write("Result:"+giatrinhap);
+        }
+        if (se1 == "vnd" && se2 == "usd") {
+            document.write("Result:"+(giatrinhap/23500)+"$");
+        }
+        if (se1 == "usd" && se2 == "vnd") {
+            document.write("Result:"+(giatrinhap*23500)+"Vnd");
+        }
+    }
+</script>
+</form>
+</body>
+</html>
