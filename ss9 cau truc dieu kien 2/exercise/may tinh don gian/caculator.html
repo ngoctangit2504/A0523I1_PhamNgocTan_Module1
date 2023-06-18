@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+    <link rel="stylesheet" href="caculator.css">
+    <script src="caculator.js"></script>
+</head>
+<body>
+<h3>Máy tính đơn giản</h3>
+<table border="5" rules="none" frame="">
+    <tr>
+        <th colspan="4">
+            <input type="text" id="ketQua" value=""/>
+        </th>
+    </tr>
+    <tr>
+        <td><button type="button" id="bt1" value="1" onclick="set('1')">1</button></td>
+        <td><button type="button" id="bt2" value="2" onclick="set('2')">2</button></td>
+        <td><button type="button" id="bt3" value="3" onclick="set('3')">3</button></td>
+        <td><button type="button" id="bt+" value="+" onclick="set('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" id="bt4" value="4" onclick="set('4')">4</button></td>
+        <td><button type="button" id="bt5" value="5" onclick="set('5')">5</button></td>
+        <td><button type="button" id="bt6" value="6" onclick="set('6')">6</button></td>
+        <td><button type="button" id="bt-" value="-" onclick="set('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" id="bt7" value="7" onclick="set('7')">7</button></td>
+        <td><button type="button" id="bt8" value="8" onclick="set('8')">8</button></td>
+        <td><button type="button" id="bt9" value="9" onclick="set('9')">9</button></td>
+        <td><button type="button" id="btx" value="*" onclick="set('*')">x</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" id="btnCE" name="operator" value="CE" onclick="ce()">C</button></td>
+        <td><button type="button" id="bt0" value="0" onclick="set('0')">0</button></td>
+        <td><button type="button" id="btnEqual" name="equal" value="=" onclick="answer()">=</button></td>
+        <td><button type="button" id="bt/" value="/" onclick="set('/')">/</button></td>
+    </tr>
+</table>
+</body>
+</html>
