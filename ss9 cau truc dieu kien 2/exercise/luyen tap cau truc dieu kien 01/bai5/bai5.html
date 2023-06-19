@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+<script>
+    let kt = prompt('Nhap diem kiem tra');
+    let gk = prompt('Nhap diem giua ki');
+    let ck = prompt('Nhap diem cuoi ki');
+    let tb;
+
+    tb = (parseInt(kt) + parseInt(gk) +parseInt(ck))/3;
+
+    if (tb>=8) {
+        alert('Diem tb'+ tb +'Hoc luc gioi');
+    } else if ((tb>=6) && (tb<8)) {
+        alert('Diem tb'+ tb +'Hoc luc kha');
+    } else if ((tb<6) && (tb<=3)) {
+        alert('Diem tb'+ tb +'Hoc luc tb');
+    }
+
+</script>
+</body>
+</html>
