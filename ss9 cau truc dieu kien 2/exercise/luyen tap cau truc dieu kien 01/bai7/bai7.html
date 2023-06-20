@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 7</title>
+</head>
+<body>
+<script>
+    let sophut = prompt("Nhập số phút gọi trong tháng");
+    let phicodinh = 25000;
+    let phi ;
+    let tong;
+
+    if (sophut>200) {
+        phi = (sophut-200)*200+150*400+50*600;
+    } else if (sophut>50) {
+        phi =(sophut -50)*400+50*600;
+    } else {
+        phi =sophut*600
+    }
+    tong = phi+phicodinh;
+    document.write('Bạn đã gọi' + sophut + 'phút');
+    
+    document.write('Số tiền phải nộp là' + tong);
+</script>
+</body>
+</html>
