@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<H3>Tính diện tích hình vuông biết cạnh a</H3>
+<p>Nhập cạnh a :</p>
+<input type="text" id='so1' value=""><br><br>
+<button type="button" onclick="tinh()">Kết quả</button>
+<p>Diện tích hình vuông :</p>
+<input type="text" id='ketqua' value="">
+<script>
+
+function tinh() {
+    let so1 = document.getElementById('so1').value;
+    let result;
+    result = (parseInt(so1) * parseInt(so1));
+    document.getElementById('ketqua').value = result;
+
+
+}
+</script>
+</body>
+</html>
