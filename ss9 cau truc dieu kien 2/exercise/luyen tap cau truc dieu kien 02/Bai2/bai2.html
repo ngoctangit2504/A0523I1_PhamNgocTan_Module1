@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+<script>
+    let select = prompt('Chọn 1 để chuyển từ mét sang feet \n Chọn 2 để chuyển từ feet sang mét');
+    if (select == 1) {
+        let m = prompt('Nhập giá trị mét :');
+        let f;
+        f = (m * 3.2808);
+        alert('Giá trị feet là : ' + f);
+    } else if ( select == 2) {
+        let f = prompt('Nhập giá trị feet :');
+        let m;
+        m = (f/3.2808);
+        alert('Giá trị mét là :' + m);
+    } else {
+        alert('Bạn cần chọn 1 hoặc 2');
+    }
+</script>
+</body>
+</html>
