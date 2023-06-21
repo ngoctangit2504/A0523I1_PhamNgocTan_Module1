@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+<h3>Tính diện tích tam giác vuông</h3>
+<p>Biết 2 cạnh kề </p>
+<p>Cạnh góc vuông 1</p>
+<input type="text" id="a">
+<p>Cạnh góc vuông 2</p>
+<input type="text" id="b">
+<br><br>
+<button type="button" onclick="tinhdt()">Tính DT</button>
+<br><br>
+<input type="text" id="display" value="">
+<script>
+    function tinhdt() {
+        let a = document.getElementById('a').value;
+        let b = document.getElementById('b').value;
+        let ketQua;
+        ketQua = ((1/2) * (parseInt(a) * parseInt(b)));
+        document.getElementById('display').value = ketQua;
+    }
+
+</script>
+</body>
+</html>
