@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+<script>
+    let select =prompt('Chọn 1 để chuyển từ độ C sang độ F \nChọn 2 để chuyển từ độ F sang độ C');
+
+    if (select == 1) {
+        let doC = prompt("Nhập độ C :");
+        doF = (1.8*doC)+32;
+        alert(" Độ F tương ứng là : " + doF);
+    } else if ( select ==2) {
+        let doF = prompt("Nhập độ F :");
+        doC = (doF-32)/1.8;
+        alert("Độ C tương ứng là :" + doC);
+    } else {
+        alert("Bạn chỉ chọn 1 hoặc 2");
+    }
+
+</script>
+</body>
+</html>
