@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 4</title>
+</head>
+<body>
+<h3>Diện tích hình chữ nhật biết 2 cạnh</h3>
+<p>Nhập cạnh a:</p>
+<input type="text" id="a">
+<p>Nhập cạnh a:</p>
+<input type="text" id="b">
+<br><br>
+<button type="button" onclick="tinhdt()">Tính dt</button>
+<p>Diện tích hình chữ nhật:</p>
+<input type="text" id="dt">
+<script>
+ function tinhdt() {
+     let a = document.getElementById('a').value;
+     let b = document.getElementById('b').value;
+     let ketQua = parseInt(a) * parseInt(b);
+
+     document.getElementById('dt').value = ketQua;
+
+
+ }
+</script>
+</body>
+</html>
