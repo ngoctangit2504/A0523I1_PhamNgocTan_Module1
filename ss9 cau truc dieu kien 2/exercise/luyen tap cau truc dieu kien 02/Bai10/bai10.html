@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 10</title>
+</head>
+<body>
+<h3>Chương trình tính giá điện</h3><br>
+<input type="text" id="sodien" placeholder="Nhập số diện"><br><br>
+<button type="button" onclick="tinhtien()">Tính tiền</button><br><br>
+<input type="text" id="result" placeholder="Kết quả" size="90"><br><br>
+
+<script>
+    function tinhtien() {
+        let muc1 = 1600;
+        let muc2 = 1700;
+        let muc3 = 2000;
+        let sd = document.getElementById('sodien').value;
+
+        if (sd<0) {
+            let chat0 = 'có thật là bạn dùng nhỏ hơn 0 chữ diện không'
+            document.getElementById('result').value = chat;
+        } else if (sd <= 50) {
+            tiendien1 = sd * muc1;
+            let chat1 = 'Bạn dùng trong khoảng 50 số và tiền phải trả là :'+ tiendien1;
+            document.getElementById('result').value = chat1;
+        } else if (sd <= 100) {
+            tiendien2 = sd * muc2;
+            let chat2 = 'Bạn dùng trong khoảng 50 tới 100 số và tiền phải trả là :'+ tiendien2;
+            document.getElementById('result').value = chat2;
+        } else if (sd <= 200) {
+            tiendien3 = sd * muc3;
+            let chat3 = 'Bạn dùng trong khoảng 100 tới 200 số và tiền phải trả là :'+ tiendien3;
+            document.getElementById('result').value = chat3;
+        }
+
+    }
+</script>
+</body>
+</html>
