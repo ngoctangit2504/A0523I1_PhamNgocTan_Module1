@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 11</title>
+</head>
+<body>
+<h3>Tính thuế thu nhập cá nhân.</h3>
+<h5>Công ty cổ phần hươu cao cổ.</h5>
+<p>Nhập thu nhập hàng tháng của bạn.</p>
+<p>- Đơn vị là triệu đồng.</p>
+<input type="text" size="50" id="thunhap" placeholder="Thu nhập của bạn"><br><br>
+<button type="button" onclick="tinhthue()">Tính thế phải nộp</button><br><br>
+<input type="text" size="50" id="result" placeholder="Thuế phải nộp">
+<script>
+    function tinhthue() {
+        let thunhap = document.getElementById('thunhap').value;
+
+        if (thunhap <= 10) {
+            let thue1 = 0.25 + (thunhap/100*10);
+            document.getElementById('result').value = thue1 +' Triệu đồng';
+        } else if (10 < thunhap <= 18) {
+            let thue2 = 0.75 + (thunhap/100*15);
+            document.getElementById('result').value = thue2 +' Triệu đồng';
+        } else if (18 < thunhap <= 32) {
+            let thue3 = 1.95 + (thunhap/100*20);
+            document.getElementById('result').value = thue3 +' Triệu đồng';
+        } else if (32 < thunhap <= 52) {
+            let thue4 = 4.75 + (thunhap/100*25);
+            document.getElementById('result').value = thue4 +' Triệu đồng';
+        } 
+    }
+</script>
+</body>
+</html>
