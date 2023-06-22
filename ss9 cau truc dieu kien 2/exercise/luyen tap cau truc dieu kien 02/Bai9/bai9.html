@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 9</title>
+</head>
+<body>
+<h3>Xét điều kiện</h3>
+Nhập 3 số thực <br>
+<input type="text" id="st1" placeholder="Số thực a"><br>
+<input type="text" id="st2" placeholder="Số thực b"><br>
+<input type="text" id="st3" placeholder="Số thực c"><br>
+<button type="button" onclick="xet()">Xét xem a,b,c có phải là cạnh tam giác không</button><br>
+<p>điều kiện để a,b,c là cạnh tam giác là:</p>
+<p>a,b,c > 0</p>
+<p>a + b > c</p>
+<p>b + c > a</p>
+<p>a + c > b</p>
+<br>
+<p>Kết quả</p>
+<input type="text" id="result" size="50">
+
+<script>
+    function xet() {
+        let a = document.getElementById('st1').value;
+        let b = document.getElementById('st2').value;
+        let c = document.getElementById('st3').value;
+
+        let ketQua = 'a,b,c là cạnh một tam giác';
+        let nguocLai = 'a,b,c không là cạnh tam giác';
+
+
+        if(a,b,c > 0){
+            if (parseFloat(a)+parseFloat(b) > parseFloat(c)) {
+                if (parseFloat(b)+parseFloat(c) > parseFloat(a)) {
+                    if (parseFloat(a)+parseFloat(c) > parseFloat(b)){
+                        document.getElementById('result').value = ketQua;
+                    }else {
+                        document.getElementById('result').value = nguocLai;
+                    }
+                }else {
+                    document.getElementById('result').value = nguocLai;
+                }
+            }else {
+                document.getElementById('result').value = nguocLai;
+            }
+        }else {
+            document.getElementById('result').value = nguocLai;
+        }
+    }
+</script>
+</body>
+</html>
