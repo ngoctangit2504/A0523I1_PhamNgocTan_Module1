@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 6</title>
+</head>
+<body>
+<h3>Giải phương trình bậc 1.</h3>
+<p>Nhập hệ số a :</p>
+<input type="text" id="a" placeholder="Hệ số a">
+<p>Nhập hệ số b :</p>
+<input type="text" id="b" placeholder="Hệ số b">
+<br><br><br><br>
+<button type="button" onclick="hienpt()">Hiện phương trình</button>
+<p>Phương trình sau khi nhập a và b</p>
+<input type="text" id="pt">
+<br><br><br><br>
+<button type="button" onclick="giai()">Giải phương trình</button>
+<br>
+<p>Nghiệm của phương trình</p>
+<input type="text" id="ketqua" placeholder="Nghiem">
+
+<script>
+    function hienpt() {
+        let a = document.getElementById('a').value;
+        let b = document.getElementById('b').value;
+        let pt = parseInt(a)+'x + '+parseInt(b)+'= 0';
+        document.getElementById('pt').value = pt;
+
+    }
+    function giai() {
+        let a = document.getElementById('a').value;
+        let b = document.getElementById('b').value;
+        let nghiem;
+
+        if (a == 0) {
+            if (b == 0) {
+                let nghiem = 'Vô số nghiệm';
+                document.getElementById('ketqua').value = nghiem;
+            } else {
+                let nghiem = 'Vô nghiệm';
+                document.getElementById('ketqua').value = nghiem;
+            }
+        }
+      else  {
+          nghiem = parseInt(-b) /parseInt(a);
+            document.getElementById('ketqua').value = 'Nghiệm là :'+ nghiem;
+        }
+    }
+</script>
+</body>
+</html>
