@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 7</title>
+</head>
+<body>
+<h3>Phương trình bậc 2 có dạng: ax^2 + bx + c = 0 (a khác 0)</h3>
+<table>
+    <tr>
+        <th>Nhập a (a khác 0)</th>
+        <th>Nhập b</th>
+        <th>Nhập c</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="a" placeholder="Nhập a (a khác 0)"></td>
+        <td><input type="text" id="b" placeholder="Nhập b"></td>
+        <td><input type="text" id="c" placeholder="Nhập c"></td>
+    </tr>
+</table>
+<br>
+<button type="button" onclick="hienpt()">Hiện phương trình</button>
+<br>
+<input type="text" id="pt" placeholder="Phương trình">
+<br><br>
+<button type="button" onclick="giaipt()">Giải PT</button>
+<br>
+<input type="text" id="display" size="90">
+
+<script>
+    function hienpt() {
+        let a = document.getElementById('a').value;
+        let b = document.getElementById('b').value;
+        let c = document.getElementById('c').value;
+        let pt = a+'x^2 +' +b+'x'+'+'+ c+' = 0' ;
+        document.getElementById('pt').value = pt;
+    }
+    function giaipt() {
+        let a = document.getElementById('a').value;
+        let b = document.getElementById('b').value;
+        let c = document.getElementById('c').value;
+        if (a==0) {
+            if (b==0) {
+                let nghiem1 = 'Vô nghiệm'
+                document.getElementById('display').value = nghiem1;
+            } else {
+                let ve2;
+                ve2 = (-c)/b;
+                let nghiem2 = 'PT có 1 nghiệm' +'x='+ve2;
+                document.getElementById('display').value = nghiem2;
+            }
+            return;
+        }
+        // Tính detal
+        let detal = b*b -4*a*c;
+        let x1;
+        let x2;
+        // Tính nghiệm
+        if (detal > 0) {
+            x1 = ((-b + Math.sqrt(detal)) / (2*a));
+            x2 = ((-b - Math.sqrt(detal)) / (2*a));
+            let pt2nghiem = 'Phương trình có 2 nghiệm là :'+ 'x1= ' +x1 +' và x2= '+x2;
+            document.getElementById('display').value = pt2nghiem;
+        } else if (detal == 0) {
+            x1 = (-b / (2*a));
+            let ptnghiemkep ='Phương trình có nghiệm kép: '+'x1 = x2 = '+x1;
+            document.getElementById('display').value = ptnghiemkep;
+        } else {
+            let ptvonghiem = 'Phương trình vô nghiệm!';
+            document.getElementById('display').value = ptvonghiem;
+        }
+
+    }
+
+
+</script>
+</body>
+</html>
