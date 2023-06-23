@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 12</title>
+</head>
+<body>
+<h3>Tính lãi suất ngân hàng</h3>
+<p>Lãi suất là : 6% trên năm</p>
+<p>Nhập số tiền gửi.</p>
+<input type="text" id="von" size="50" placeholder="Số tiền gửi"><br>
+<p>Nhập thời hạn gửi.</p>
+<input type="text" id="han" size="50" placeholder="Thời hạn gửi"><br><br>
+<button type="button" onclick="tinhlai()">Tính lãi</button>
+<button type="button" onclick="tieptuc()">Tiếp tục với gốc và lãi</button> <br>
+<input type="text" id="result" size="50">
+
+<script>
+function tinhlai() {
+    let p = document.getElementById('von').value;
+    let r = 6;
+    let t = document.getElementById('han').value;
+
+    let laisuat = (parseFloat(p)*6*parseFloat(t))/100;
+    document.getElementById('result').value = laisuat;
+}
+function tieptuc() {
+    let p = document.getElementById('von').value;
+    let r = 6;
+    let t = document.getElementById('han').value;
+    let laisuat = (parseFloat(p)*6*parseFloat(t))/100;
+    let congdon = parseFloat(laisuat) + parseFloat(p);
+    document.getElementById('von').value = congdon;
+
+}
+</script>
+</body>
+</html>
