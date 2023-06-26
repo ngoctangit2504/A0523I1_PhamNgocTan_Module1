@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bai 3</title>
+    <title>Bai 4</title>
 </head>
 <body>
 <script>
@@ -15,7 +15,9 @@
 
     for (let i=1; i <= number; i++) {
         document.write(n1+'  ');
-
+        if (n1 % 5 ==0) {
+            alert('số '+n1 +'là số chia hết cho 5' );
+        }
         next =n1 + n2;
         n1 = n2 ;
         n2 = next;
