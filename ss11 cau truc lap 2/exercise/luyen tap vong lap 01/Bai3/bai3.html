@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt('Nhập số lượng fibonacci muốn in ra: '));
+    let n1 = 0;
+    let n2 = 1;
+    let next;
+
+    document.write('Fibonacci : ');
+
+    for (let i=1; i <= number; i++) {
+        document.write(n1+' ' );
+        next =n1 + n2;
+        n1 = n2 ;
+        n2 = next;
+    }
+</script>
+</body>
+</html>
