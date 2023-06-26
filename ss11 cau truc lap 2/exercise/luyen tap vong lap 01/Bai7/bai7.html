@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 7</title>
+</head>
+<body>
+<script>
+    let n = prompt('Nhập vào n số bạn muốn hiển thị trên dãy');
+
+    for (let i = 1; i <= n; i++) {
+        let out1 ;
+        let out2 ;
+        let out3 ;
+
+        if ((i%3==0)&&(i%5==0)) {
+            out1 = 'Fizz Buzz';
+            document.write((out1)+'<br>');
+        } else if (i%3==0) {
+            out2 = 'fizz';
+            document.write((out2)+'<br>');
+        } else if (i%5==0) {
+            out3 = 'buzz';
+            document.write((out3)+'<br>');
+        } else {
+            document.write((i)+'<br>')
+        }
+    }
+</script>
+</body>
+</html>
