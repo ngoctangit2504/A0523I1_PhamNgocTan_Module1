@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+<script>
+   /* let n = parseInt(prompt("Nhập số lượng cần in: "));
+    let f = " ";
+    let sum = 0;
+    let number1 =0;
+     let number2 = 1 ;
+      let next=0;
+    for (let i = 0 ; i<=n; i++){
+        if (i <= 1) {
+            next = i;
+        } else {
+            next = number1 + number2;
+            number1 = number2;
+            number2 = next;
+        }
+        f += next + " " + "</br>";
+        sum +=next;
+    }
+    document.write("Dãy fibonacci :" + "</br>" +f);
+    document.write("Tổng : " +sum);
+*/
+
+
+
+let number = prompt('Nhập vào số lượng số fibonacci');
+let n1 = 0;
+let n2 = 1;
+let next = 0;
+let sum =0;
+
+document.write('Dãy fibonacci :'+'<br>')
+
+for (let i=0;i <= number;i++) {
+        document.write(n1 + ' '+'<br>');
+        next = n1 + n2;
+        n1 = n2;
+        n2 = next;
+}
+sum += next;
+document.write('Tổng bằng: ' + sum);
+
+</script>
+</body>
+</html>
