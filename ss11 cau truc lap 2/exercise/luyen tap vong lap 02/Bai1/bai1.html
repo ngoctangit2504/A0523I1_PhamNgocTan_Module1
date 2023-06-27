@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+    <link rel="stylesheet" href="bai1.css">
+</head>
+<body>
+<h3>In ra dãy Fibonacci theo ý của bạn</h3>
+<hr>
+Nhập
+<input type="text" id="input" placeholder="Nhập số fibonacci muốn hiển thị"><br><br>
+
+<button type="button" onclick="hienDay()">Hiện dãy</button><br>
+<p  id="result"></p>
+<script>
+    function hienDay() {
+        let n = document.getElementById('input').value;
+        let n1=0;
+        let n2=1;
+        let next;
+        let kt = 'Finonacci';
+
+        document.getElementById('result').innerText = kt;
+
+        for (let i=1;i<n;i++) {
+            document.getElementById('result').innerText =  n1+' ';
+            next = n1 + n2;
+            n1 = n2;
+            n2 = next;
+        }
+    }
+</script>
+</body>
+</html>
