@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+    <link rel="stylesheet" href="bai3.css">
+</head>
+<body>
+<h3>In ra các tam giác vuông</h3>
+
+<hr>
+<script>
+    let n = prompt('Nhập độ dài các cạnh của tam giác');
+    let pix = '$';
+
+    // độ cao của hình tam giác
+    for (let i = 0; i <= n; i++) {
+        // các hàng (row)
+        for (let j = 0; j <= i; j++) {
+            document.write(pix + ' ');
+        }
+        document.write('<br>');
+    }
+    document.write('<br>');
+    document.write('<br>');
+
+
+    for (let i = n; i >= 0; i--) {
+        for (let j = 0; j <= i; j++) {
+            document.write(pix + ' ');
+        }
+        document.write('<br>');
+    }
+    document.write('<br>');
+    document.write('<br>');
+
+
+    for (let i = 0; i <= n; i++) {
+        for (let k = n; k > i; k--) {
+            document.write("&nbsp; &nbsp; ");
+        }
+        for (let j = 0; j <= i; j++) {
+            document.write(pix+" ");
+        }
+        document.write('<br>');
+    }
+    document.write('<br>');
+    document.write('<br>');
+
+
+    for (let i = 0; i <= n; i++) {
+        for (let k = 0; k < i; k++) {
+            document.write("&nbsp; &nbsp; ")
+        }
+        for (let j = i; j <= n; j++) {
+            document.write(pix +" ");
+        }
+        document.write('<br>');
+    }
+
+
+</script>
+</body>
+</html>
