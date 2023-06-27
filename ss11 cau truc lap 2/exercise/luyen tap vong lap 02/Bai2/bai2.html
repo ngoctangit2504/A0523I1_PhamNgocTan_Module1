@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+
+<button onclick="thuNgay()">Thử ngay</button>
+<p id="result"></p>
+
+
+<script>
+    function thuNgay() {
+        let num = prompt("Nhập vào 1 số để tính ra giai thừa của số đó");
+        let giaiThua = 1;
+        for (var i = 1; i <= num; i++) {
+            giaiThua *= i;
+        }
+        document.getElementById("result").innerHTML = giaiThua;
+    }
+</script>
+</body>
+</html>
