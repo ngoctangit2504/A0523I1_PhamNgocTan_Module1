@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-
-
 <body>
 <form id="game">
     <h3 >Trò chơi đoán số ngẫu nhiên (-.-)</h3>
@@ -17,48 +15,22 @@
         function start() {
             let nhoNhat = prompt('Nhập số nhỏ nhất trong khoảng');
             let lonNhat = prompt('Nhập số lớn nhất trong khoảng');
-            let soChon = prompt('Chọn số bạn đoán trong trò chơi này');
+
             let ranDom;
             ranDom = Math.floor(Math.random() * parseInt(lonNhat)) + parseInt(nhoNhat);
-
-                if (soChon < ranDom) {
-                    alert('Bạn chọn nhỏ hơn rồi');
-                    for (let i=0;i<2;i++) {
-                        let soChon = prompt('Chọn lại số bạn đoán trong trò chơi này');
-                        if (soChon != ranDom) {
-                            alert('Bạn đc chọn lại lần nữa');
-                        }
-                        if (soChon == ranDom) {
-                            alert('Đúng rồi, kết thúc');
-                            break;
-                        }
-                    }
-                }
-
-                if (soChon > ranDom) {
-                    alert('Số bạn chọn lớn hơn rồi');
-                    for (let a=0;a<2;a++) {
-                        let soChon = prompt('Chọn lại số bạn đoán trong trò chơi này');
-                        if (soChon != ranDom) {
-                            alert('Bạn được chọn lần nữa');
-                        }
-                        if (soChon == ranDom) {
-                            alert('Đúng rồi, kết thúc');
-                            break;
-                        }
-                    }
-                }
-
+            do {
+                let soChon = prompt('Chọn số bạn đoán trong trò chơi này');
                 if (soChon == ranDom) {
                     alert('Bạn chọn đúng rồi');
+                    break;
+                } else if (soChon < ranDom) {
+                    alert('Số bạn chọn nhỏ hơn rồi');
+                } else {
+                    alert('số bạn chọn lớn hơn rồi');
                 }
-                alert('số máy chọn trong dãy là');
-                document.write(ranDom);
+                i++;
+            } while (i <= 3);
         }
-            function reset() {
-                let element = document.getElementById('game');
-                element.reset();
-            }
     </script>
 </form>
 </body>

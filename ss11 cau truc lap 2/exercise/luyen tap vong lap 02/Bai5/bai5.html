@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+    <link rel="stylesheet" href="bai5.css">
+</head>
+<body>
+
+    <h3>Tính lãi suất ngân hàng</h3>
+    <hr>
+
+<p>Tiền gốc phải trả hàng tháng = Số tiền vay/Thời gian vay(tháng)</p>
+<p>Tiền lãi phải trả hàng tháng = Gốc * Lãi suất(năm)/12</p><br>
+<hr>
+
+<!-- Bảng tính-->
+<div class="cotainer">
+    <!--Nhập liệu và tính toán-->
+    <form action="">
+        <table>
+            <!--Số tiền vay-->
+            <tr>
+                <td>
+                    <label for="">Số tiền vay</label>
+                </td>
+                <td colspan="2">
+                    <input type="text" name="" id="money" placeholder="Số tiền vay..."> <span>VND</span>
+                </td>
+            </tr>
+
+            <!--Thời gian vay-->
+            <tr>
+                <td>
+                    <label for="">Thời gian vay</label>
+                </td>
+                <td colspan="2">
+                    <input type="text" name="" id="time" placeholder="Thời gian vay..."> <span>tháng</span>
+                </td>
+            </tr>
+
+            <!--Lãi suất-->
+            <tr>
+                <td>
+                    <label for="">Lãi suất</label>
+                </td>
+                <td colspan="2">
+                    <input type="text" name="" id="lai" placeholder="Lãi suất..."> <span>%năm</span>
+                </td>
+            </tr>
+
+            <!--Ngày giải ngân-->
+            <tr>
+                <td>
+                    <label for="">Ngày giải ngân</label>
+                </td>
+                <td colspan="2">
+                    <input type="text" name="" id="giaingan" placeholder="Ngày giải ngân..."> <span>mm/dd/yyyy</span>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+
+    <div class="row">
+        <input type="submit" value="Tính" id="" onclick="final()">
+    </div>
+    <br>
+
+    <!-- bảng kết quả -->
+    <table>
+        <thead>
+        <tr>
+            <th colspan="2">Kỳ trả nợ</th>
+            <th>Số gốc còn lại</th>
+            <th>Gốc</th>
+            <th>Lãi</th>
+            <th>Tổng gốc + lãi</th>
+        </tr>
+        </thead>
+
+        <tbody id="body">
+        <tr>
+            <!--Hiển thị kết quả-->
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="bai5.js"></script>
+</body>
+</html>
