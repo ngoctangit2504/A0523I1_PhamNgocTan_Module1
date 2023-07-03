@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển</title>
+</head>
+<body>
+<h3>Tra cứu từ điển fake</h3><br>
+<img height="100px" width="100px" src="https://antimatter.vn/wp-content/uploads/2022/06/hinh-anh-mat-cuoi-khoc-sticker-dep.jpg">
+<hr>
+<form>
+    <p>Từ điển Anh - Việt</p>
+    <p>Lưu ý: Vì từ điển có hạn nên nhập các từ sau để tìm kiếm ('one','two','three','four','fire')</p>
+    <input type="text" size="30%" id="tuKhoa" placeholder="Nhập từ cần tìm">
+    <button type="button" onclick="traCuu()">Tìm Kiếm</button><br><br>
+    <p>Dịch</p>
+    <input type="text" id="ketQua" PLACEHOLDER="kết quả">
+</form>
+<script>
+let arr1 = ['one','two','three','four','fire'];
+let arr2 = ['một','hai','ba','bốn','năm'];
+
+function traCuu() {
+    let a = arr1.indexOf(document.getElementById('tuKhoa').value);
+    document.getElementById('ketQua').value = arr2[a];
+
+}
+
+/*
+let value = prompt("Enter a number: ");
+let numbers = [-3, 5, 1, 3, 2, 10];
+for (let i = 0; i < numbers.length; i++) {
+    if (value == numbers[i]) {
+        alert("Value " + numbers[i] + "found at " + i);
+    }
+}
+*/
+
+</script>
+</body>
+</html>
