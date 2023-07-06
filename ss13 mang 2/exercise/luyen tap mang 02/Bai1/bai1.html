@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<h3>Khởi tạo mảng 2 chiều .</h3>
+<script>
+    /*
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7]
+ */
+    /* --------- Cách 1 ---------
+    let arr1 = [];
+    for (let i = 0; i<5 ;i++) {
+        arr1[i] = [];
+        for (let j = 0;j < 4 ;j++ ) {
+            arr1 [i][j] = prompt('NHập phần tử tại vị trí i = '+i+' j = '+j);
+        }
+    }
+    console.log(arr1);
+    */
+
+// -------- Cách 2 -----------
+    // mảng 5 dòng 4 cột
+    let arr =[];
+    for (let i = 0;i < 5;i++) {
+        arr[i] = [];
+        console.log("row "+i);
+        for (let j = 0; j < 4; j++) {
+            arr[i][j] = prompt('Nhập tại i ' + i + ' và j ' + j);
+            console.log(" " + arr[i][j]);
+        }
+    }
+
+/*  ---------- Cách 3 ----------
+    let row = +prompt('Nhập số hàng của mảng 2 chiều : ');
+    let col = +prompt('Nhập số cột của mảng 2 chiều : ' );
+
+    let arr =  new Array(row);
+    for (let row_index = 0; row_index < arr.length ;row_index++) {
+        arr[row_index] = new Array(col);
+        for (let col_index = 0;col_index <arr[row_index].length;col_index++) {
+            arr[row_index][col_index] = +prompt('Nhập giá trị tại row '+row_index+' col '+col_index);
+
+        }
+    }
+    console.log(arr);
+ */
+</script>
+</body>
+</html>

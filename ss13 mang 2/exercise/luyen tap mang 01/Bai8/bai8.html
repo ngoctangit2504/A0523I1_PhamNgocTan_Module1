@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<script>
+    let arr = [];
+
+    for (let i=0;i<10;i++) {
+        arr[i] = prompt('Nhập phần tử tại vị trí ' + i+' :');
+    }
+    document.write('Chuỗi nhập vào :'+ arr + '<br>');
+    arr.sort(function (a,b){return b-a});
+    document.write('Chuỗi giảm dần :'+ arr);
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<script>
+    let arrA = [];
+    for (let i = 0;i<3;i++) {
+        arrA[i] = prompt('Nhập phần tử '+i+ ' mảng A');
+    }
+    let arrB = [];
+    for (let j = 0;j<3;j++) {
+        arrB[j] = prompt('Nhập phần tử '+j+ ' mảng B');
+    }
+    let arrC = [];
+      arrC  = arrA.concat(arrB);
+
+    document.write("Mảng A : "+arrA+'<br>');
+    document.write("Mảng B : "+arrB+'<br>');
+    document.write("Mảng C : "+arrC);
+
+</script>
+</body>
+</html>
