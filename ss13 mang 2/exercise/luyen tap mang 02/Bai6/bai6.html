@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<p>Nhập các kí tự trong mảng.</p>
+<input type="text" size="30%" id="input" placeholder="Nhập kí tự của mảng">
+<br><br>
+<button type="button" onclick="chuyen()">Chuyển</button>
+<br>
+<p>Kết quả sau khi tìm và chuyển (-) sang (_)</p>
+<input type="text" id="result" size="30%" placeholder="Kết quả">
+
+<script>
+    function chuyen() {
+        let stringIn = document.getElementById('input').value;
+
+        let arrIn = [...stringIn];
+        for (let i=0;i<arrIn.length;i++) {
+            if (arrIn[i] == '-') {
+                 arrIn[i] = '_';
+            }
+        }
+        document.getElementById('result').value = arrIn ;
+    }
+</script>
+</body>
+</html>

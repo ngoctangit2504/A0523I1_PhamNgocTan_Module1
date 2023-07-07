@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<h3>Kiểm tra 2 chuỗi có giống nhau không.</h3>
+<p>Nhập chuỗi thứ nhất</p>
+<input type="text" id="string1" size="30%" placeholder="Chuỗi 1"><br>
+<p>Nhập chuỗi thứ hai.</p>
+<input type="text" id="string2" size="30%" placeholder="Chuỗi 2"><br><br>
+<button type="button" onclick="kiemTra()">Check</button><br>
+<input type="text" id="result" size="30%" placeholder="Kết quả">
+
+<script>
+    function kiemTra() {
+        let chuoi1 = document.getElementById('string1').value;
+        let chuoi2 = document.getElementById('string2').value;
+        let arr1 = [...chuoi1];
+        let arr2 = [...chuoi2];
+
+        let isEqual;
+
+        if (arr1.length !== arr2.length) {
+            isEqual = 'Chuỗi là khác nhau';
+        } else {
+            for (let i=0; i < arr1.length; i++) {
+                if (arr1[i] !== arr2[i]) {
+                    isEqual = 'Chuỗi là khác nhau';
+                    break;
+                }
+                isEqual = 'Chuỗi là giống nhau';
+            }
+        }
+        document.getElementById('result').value = isEqual;
+    }
+</script>
+</body>
+</html>

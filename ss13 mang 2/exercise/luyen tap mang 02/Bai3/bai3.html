@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<h3>
+    Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.
+    Chương trình này đếm số ký tự số trong mảng.
+</h3><br>
+<p>Ví dụ với mảng 2 chiều.</p>
+<p id="result1"></p>
+<p id="result2"></p>
+<p id="result3"></p>
+<script>
+    let row = +prompt('Số hàng :');
+    let col = +prompt('Số cột');
+    let arr = new Array(row);
+    for (let i=0;i<arr.length;i++) {
+        arr[i] = new Array(col);
+        for (let j = 0;j<arr[i].length;j++) {
+            arr[i][j] = +prompt("Nhập phần tử tại vị trí row"+i+' col '+j);
+        }
+    }
+    document.getElementById('result1').innerHTML = 'Mảng gồm '+row+' hàng.';
+    document.getElementById('result2').innerHTML = 'Mảng có '+col+' cột.'
+    document.getElementById('result3').innerHTML = 'Mảng : '+arr;
+</script>
+</body>
+</html>

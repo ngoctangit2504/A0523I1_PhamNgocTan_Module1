@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<table>
+    <caption><h3>Thống kê chuỗi</h3></caption>
+    <tr>
+        <td>Chuỗi :</td>
+        <td><input type="text" id="txt" size="50%"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button onclick="Statistic()">Thống kê</button></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><p id="kq"></p></td>
+    </tr>
+</table>
+<script>
+    function Statistic() {
+        let s = document.getElementById('txt').value;
+        let arr = s.split(" ");
+        let i = 0;
+        let words = 0;
+        let arrkq = [];        // mảng chứa kết quả thống kê.
+        for (i = 0; i <= 128;i++)
+            arrkq[i] = 0;      // khởi tạo tất cả phần tử đều bằng 0.
+        for (i = 0;i<arr.length;i++)        //đếm số từ trong chuỗi
+            if (arr[i].trim() != "")
+                words++;
+        // bắt đầu thống kê kí tự
+        let kq = "Kí tự của chuỗi : " + s.length+"<br>"
+                  + " Từ : " +words +"<br>";
+        for (i = 0;i <s.length; i++) {
+
+            if (s.charCodeAt(i) >= 'a' && s.charCodeAt(i) <= 'z')        // kí tự a đến z
+                arrkq[s.charCodeAt(i)-32]++;       // chuyển sang kí tự in hoa
+             else         // các kí tự khác
+                arrkq[s.charCodeAt(i)]++;
+        }
+        // duyệt mảng thống kê
+        for ( i = 0; i< arrkq.length; i++) {
+            if (arrkq[i] > 0)
+                kq += "Kí tự : " + String.fromCharCode(i) + " : " + arrkq[i] + "<br>";
+        }
+document.getElementById('kq').innerHTML = kq;
+    }
+
+    /*
+    Các phương thức dùng trong bài:
+    - .split : phân tách một chuỗi thành một mảng dữ liệu dựa vào các kí tự phân cách trong chuỗi.
+                Phương thức sẽ trả về một mảng mới.
+    - .trim  : loại bỏ các khoảng trắng ở đầu và cuối chuỗi.
+    - .charCodeAt : trả về giá trị unicode của một kí tự tại một vị trí xác định.
+    - .fromCharCode : dùng để chuyển đổi các giá trị Unicode sang các ký tự.
+     */
+</script>
+</body>
+</html>
