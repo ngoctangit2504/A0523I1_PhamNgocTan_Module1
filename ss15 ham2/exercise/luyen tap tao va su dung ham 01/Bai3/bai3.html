@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<h3>
+    Tạo hàm nhận vào hai tham số.
+    Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai,
+    hiển thị hộp thoại thông báo cho người dùng.
+    Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai,
+    trả về tổng của hai tham số.
+</h3>
+<hr>
+<input type="number" id="thamSo1" placeholder="Nhập tham số 1">
+<br><br>
+<input type="number" id="thamSo2" placeholder="Nhập tham số 2">
+<br>
+<button type="button" onclick="check()">Check</button>
+<br>
+<p id="result">Result :</p>
+
+<script>
+    function check() {
+        let a = +document.getElementById('thamSo1').value;
+        let b = +document.getElementById('thamSo2').value;
+        function twoNumber() {
+            sum = a + b;
+            return sum;
+        }
+        if (a == b) {
+            alert('Tham số a bằng tham số b');
+        } else {
+            sum = twoNumber();
+            let result;
+            document.getElementById('result').innerHTML = sum;
+        }
+    }
+
+</script>
+</body>
+</html>
