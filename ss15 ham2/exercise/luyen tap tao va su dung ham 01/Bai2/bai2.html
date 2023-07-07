@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<h3>Tạo hàm nhận vào một đối số dạng số,
+    tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm.
+    Gọi hàm từ trong phần body của trang web và hiển thị kết quả lên màn hình.
+</h3>
+<hr>
+<input type="number" id="input" placeholder="Nhập đối số">
+<button type="button" onclick="check()">Demo</button>
+<p id="result"></p>
+
+<script>
+    function check() {
+        function number(x) {
+            let newNum = x + 1;
+            return newNum;
+        }
+        let n = +document.getElementById('input').value;
+        let result = number(n);
+        document.getElementById('result').innerHTML = result;
+    }
+
+</script>
+</body>
+</html>
