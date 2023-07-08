@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<h3>Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</h3>
+<hr>
+<input id="input" placeholder="Nhập n">
+<button type="button" onclick="tinh()">Tính giai thừa</button><br>
+<p>Result :</p><p id="result"></p>
+
+<script>
+    function hamTinhGiaiThua() {
+        let n = document.getElementById('input').value;
+        let gt = n*(n-1);
+        return gt;
+    }
+
+    function tinh() {
+        document.getElementById('result').innerHTML = hamTinhGiaiThua();
+    }
+</script>
+</body>
+</html>
