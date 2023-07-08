@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<h3>Viết hàm tính bình phương của một số bất kỳ được đưa vào.
+    Gọi hàm vừa xây dựng được.</h3>
+<hr>
+<button type="button" onclick="tinh()">Hàm tính bình phương</button>
+
+<script>
+    function binhPhuong() {
+        let a = prompt('Nhập a :')
+        let b = a * a;
+        return 'kết quả = ' + b;
+    }
+
+    function tinh() {
+        alert(binhPhuong())
+    }
+</script>
+</body>
+</html>
