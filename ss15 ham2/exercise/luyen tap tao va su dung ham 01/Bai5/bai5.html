@@ -17,8 +17,11 @@
     function duyetMang() {
         let a = prompt("Nhập sao trong hàm :")
         for (let i = 0 ;i < arr1.length; i++) {
-            if (a = arr1[i]) {
+            if (a == arr1[i]) {
                 a = i;
+                break;
+            } else if (a != arr1[i]) {
+                alert('Sao bạn nhập bị sai');
                 break;
             }
         }
@@ -26,9 +29,9 @@
     }
 
     function searchStar() {
-        alert(arr2[duyetMang()])
+        alert('Chòm sao tương ứng '+arr2[duyetMang()])
     }
-    
+
 </script>
 </body>
 </html>
