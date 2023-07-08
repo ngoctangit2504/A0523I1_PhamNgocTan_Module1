@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<h3>Viết hàm tính diện tích <br>
+    hàm tính chu vi hình tròn <br>
+    Gọi hàm vừa xây dựng được
+</h3>
+<hr>
+<button type="button" onclick="dienTich()">Hàm tính diện tích hình tròn</button>
+<button type="button" onclick="chuVi()">Hàm tính diện tích hình tròn</button>
+<br><br>
+<input type="text" id="result" placeholder="Kết quả">
+
+<script>
+    function hamDienTich() {
+        let d = prompt('Nhập đường kính :');
+        let dt = 3.14*((d/2)*(d/2));
+        return dt;
+    }
+    function hamChuVi() {
+        let d = prompt('Nhập đường kính');
+        let cv = d * 3.14;
+        return cv;
+    }
+
+    function dienTich() {
+        document.getElementById("result").value = hamDienTich();
+    }
+    function chuVi() {
+        document.getElementById("result").value = hamChuVi();
+    }
+</script>
+</body>
+</html>
