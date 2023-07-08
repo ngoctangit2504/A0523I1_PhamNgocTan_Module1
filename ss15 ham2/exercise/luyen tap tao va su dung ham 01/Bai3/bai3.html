@@ -25,16 +25,15 @@
     function check() {
         let a = +document.getElementById('thamSo1').value;
         let b = +document.getElementById('thamSo2').value;
-        function twoNumber() {
-            sum = a + b;
-            return sum;
+        function sum() {
+            sumab = a + b;
+            return sumab;
         }
         if (a == b) {
             alert('Tham số a bằng tham số b');
         } else {
-            sum = twoNumber();
-            let result;
-            document.getElementById('result').innerHTML = sum;
+            sumab = sum();
+            document.getElementById('result').innerHTML = sumab;
         }
     }
 
