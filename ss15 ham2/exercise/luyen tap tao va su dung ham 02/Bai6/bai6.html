@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<h3>
+    Viết hàm nhận vào một số,
+    kiểm tra xem nếu số đưa vào có phải là nguyên dương không.
+    Nếu là nguyên dương trả về true, ngược lại trả về false.
+</h3>
+<hr>
+<button type="button" onclick="star()">Bắt đầu</button>
+
+<script>
+    function soDuong(num) {
+        if (num > 0) {
+            alert(true);
+        } else {
+            alert(false);
+        }
+    }
+
+    function star() {
+        let n = prompt('Nhập một số để kiểm tra :');
+        soDuong(n);
+    }
+</script>
+</body>
+</html>
