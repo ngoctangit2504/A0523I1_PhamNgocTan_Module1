@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<h3>
+    Viết hàm truyền vào 2 số nguyên bất kì,
+    thực hiện đổi chỗ hai số nguyên đó.
+</h3>
+<hr>
+<button type="button" onclick="batDau()">Bắt Đầu</button>
+
+<script>
+    function doiCho(a,b) {
+        [a, b] = [b, a];
+        document.write('Sau khi đổi chỗ a = '+a+'; b = '+b);
+    }
+
+    function batDau() {
+        let x = prompt('Nhập a ');
+        let y = prompt('Nhập b');
+        document.write('Trước khi đổi chỗ a = '+x+'; b = '+y+'<br>');
+        doiCho(x,y);
+    }
+
+</script>
+</body>
+</html>
