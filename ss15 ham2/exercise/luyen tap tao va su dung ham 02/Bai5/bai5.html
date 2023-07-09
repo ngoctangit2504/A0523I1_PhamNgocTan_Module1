@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<h3>
+    Viết hàm nhận vào 3 số nguyên bất kỳ,
+    trả về số nguyên có giá trị nhỏ nhất.
+</h3>
+<hr>
+<button type="button" onclick="star()">Bắt đầu</button>
+<script>
+    function minInThreeNumber(arr) {
+        let min = arr[0];
+        for (let i= 0;i < arr.length; i++) {
+            if (min > arr[i]) {
+                min = arr[i];
+            }
+        }
+        alert("Số nhỏ nhất trong 3 số là : "+min);
+    }
+
+    function star() {
+        let number = new Array(3);
+        for (let i =0;i < number.length; i++) {
+            number[i] = prompt('Nhập giá trị thứ '+(i+1)+" :");
+        }
+        minInThreeNumber(number);
+    }
+</script>
+</body>
+</html>
