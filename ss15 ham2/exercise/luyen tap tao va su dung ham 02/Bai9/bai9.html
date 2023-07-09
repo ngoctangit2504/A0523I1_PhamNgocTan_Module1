@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<h3>
+    Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ
+    kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+    Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+</h3>
+<hr>
+<button type="button" style="background-color: gold" onclick="kiemTra()">Kiểm Tra Phần tử</button>
+<br><br>
+<p>Mảng :</p>
+<input type="text" id="input" size="50%" placeholder="Mảng sau khi nhập">
+<br><br>
+<p>Phần tử :</p>
+<input type="text" id="kitu" size="50%" placeholder="Kí tự muốn kiểm tra">
+<br><br>
+<p>Kết quả :</p>
+<input type="text" size="50%" id="result" placeholder="Kết quả">
+
+
+
+<script>
+    function newArr() {
+        let arr = new Array(5);
+        for (let i = 0 ; i<arr.length; i++) {
+            arr[i] = prompt('Nhập phần tử tại vị trí '+i+ " :")
+        }
+        document.getElementById('input').value = arr;
+    }
+
+    function kiTu() {
+        let kt = prompt('Nhập kí tự muốn kiểm tra :');
+        document.getElementById('kitu').value = kt;
+    }
+
+    function xacDinh(array,x) {
+        let count = 0;
+        for (let i=0 ; i < array.length; i++) {
+            if (array[i] == x) {
+                count++;
+            } 
+        }
+        document.getElementById('result').value = 'Phần tử '+x+' xuất hiện '+count+' lần';
+    }
+
+    function kiemTra() {
+        newArr();
+        let a = document.getElementById('input').value;
+
+       kiTu();
+       let b = document.getElementById('kitu').value;
+
+       xacDinh(a,b);
+    }
+</script>
+
+
+</body>
+</html>
