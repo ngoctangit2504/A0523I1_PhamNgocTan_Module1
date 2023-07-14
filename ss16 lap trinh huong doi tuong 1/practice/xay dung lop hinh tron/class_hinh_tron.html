@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Hình Tròn</title>
 </head>
 <body>
-$END$
+<script>
+
+let myCircle = function (radius,color) {
+    this.radius = radius;
+    this.color = color;
+
+    this.getRadius = function () {
+        return radius;
+    }
+
+
+    this.getArea = function () {
+        return Math.PI * radius * radius;
+    }
+};
+
+let cricle = new myCircle(2);
+let radius = cricle.getRadius();
+let area = cricle.getArea();
+
+alert('radius: '+radius+ "; area: "+area);
+
+</script>
 </body>
 </html>

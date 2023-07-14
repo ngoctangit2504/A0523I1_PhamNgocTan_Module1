@@ -2,9 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Xây dựng lớp hình chữ nhật.</title>
 </head>
 <body>
-$END$
+<h3>[Bài tập] Xây dựng lớp mô tả hình chữ nhật</h3>
+<hr>
+<button type="button" onclick="veHinh()">Bấm để vẽ hình chữ nhật</button>
+<br><br>
+<canvas id="myCanvas" height="500" width="600" style="border: 5px solid yellow"></canvas>
+<script>
+    function veHinh() {
+        let a = +prompt('Nhập chiều dài:');
+        let b = +prompt('Nhập chiều rộng:');
+
+        let Rectangle = function (width, height) {
+            this.width = width;
+            this.height = height;
+
+            this.tinhDienTich = function () {
+                return width * height;
+            }
+            this.tinhChuVi = function () {
+                return 2 * (width + height);
+            }
+        }
+        let rectangle = new Rectangle(a, b);
+        let dienTich = rectangle.tinhDienTich();
+        let chuVi = rectangle.tinhChuVi();
+
+        let canvas = document.getElementById('myCanvas');
+        let text1 = ('Chiều dài: ' + a + ', Chiều rộng: ' + b);
+        let ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#FF0000'
+        ctx.font = '30px Arial';
+        ctx.fillText(text1, 10, 50);
+
+        let text2 = ('Diện tích: ' + dienTich + ', ' + ' Chu vi: ' + chuVi);
+        ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#FF0000'
+        ctx.font = '30px Arial';
+        ctx.fillText(text2, 10, 100);
+        
+        ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#686868";
+        ctx.fillRect(10, 200, a, b);
+    }
+</script>
 </body>
 </html>
