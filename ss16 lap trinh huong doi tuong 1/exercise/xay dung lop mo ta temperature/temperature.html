@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<h3>Temperature</h3>
+<hr>
+<h5>Nhiệt độ C.</h5>
+<input type="text" id="input" placeholder="Nhập độ C vào đây">
+<br><br>
+<button type="button" onclick="cToF()">Độ C sang độ F</button>
+<input type="text" id="result1" placeholder="Kết quả ...">
+<br><br>
+<button type="button" onclick="cToK()">Độ C sang độ K</button>
+<input type="text" id="result2" placeholder="Kết quả ...">
+
+<script>
+
+    let temperature = function (c) {
+        this.c = c;
+
+        this.doCSangDoF = function () {
+            let f = ((c*1.8)+32);
+            return f;
+        }
+        this.doCSangDoK = function () {
+            let k = (c+273.15);
+            return k;
+        }
+    }
+
+    function cToF() {
+        let doC = document.getElementById('input').value;
+        let nhietDo = new temperature(doC);
+        let f = nhietDo.doCSangDoF();
+        document.getElementById('result1').value = f;
+    }
+    function cToK() {
+        let doC = +document.getElementById('input').value;
+        let nhietDo = new temperature(doC);
+        let k = nhietDo.doCSangDoK();
+        document.getElementById('result2').value = k;
+    }
+</script>
+
+</body>
+</html>
