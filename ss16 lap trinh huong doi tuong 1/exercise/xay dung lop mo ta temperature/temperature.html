@@ -18,31 +18,30 @@
 
 <script>
 
-    let temperature = function (c) {
-        this.c = c;
-
-        this.doCSangDoF = function () {
-            let f = ((c*1.8)+32);
-            return f;
+    class Temperature {
+        constructor(doC) {
+            this.c = doC;
         }
-        this.doCSangDoK = function () {
-            let k = (c+273.15);
-            return k;
+        doCSangDoF() {
+           return (this.c*1.8)+32;
+        }
+        doCSangDoK() {
+            return (this.c+273.15);
         }
     }
 
     function cToF() {
-        let doC = document.getElementById('input').value;
-        let nhietDo = new temperature(doC);
-        let f = nhietDo.doCSangDoF();
+        let nhietdo = document.getElementById('input').value;
+        let ctof = new Temperature(nhietdo);
+        let f = ctof.doCSangDoF();
         document.getElementById('result1').value = f;
     }
     function cToK() {
-        let doC = +document.getElementById('input').value;
-        let nhietDo = new temperature(doC);
-        let k = nhietDo.doCSangDoK();
+        let nhietdo = +document.getElementById('input').value;
+        let ctok = new Temperature(nhietdo);
+        let k = ctok.doCSangDoK();
         document.getElementById('result2').value = k;
-    }
+     }
 </script>
 
 </body>
