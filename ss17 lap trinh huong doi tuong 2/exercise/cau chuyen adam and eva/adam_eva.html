@@ -7,7 +7,6 @@
 <body>
 <h1>Câu chuyện Adam Và Eva</h1>
 <hr>
-<button onclick="start()">Bắt đầu</button>
 <div id="human">
     <img width="200" height="200" src="https://cdn.w600.comps.canstockphoto.com/adam-eve-and-a-snake-under-an-apple-eps-vectors_csp31882235.jpg">
     <table>
@@ -36,6 +35,11 @@
             <td><button onclick="adamHai()">Adam Hái táo</button></td>
             <td><button onclick="evaHai()">Eva Hái táo</button></td>
         </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="say1()">Nói</button></td>
+            <td><button onclick="say2()">Nói</button></td>
+        </tr>
     </table>
 </div>
 <div>
@@ -45,91 +49,100 @@
             <td>Trọng lượng :</td>
             <td><input type="text" id="apple1"></td>
         </tr>
-        <tr>
-            <td>Táo còn hoặc táo hết :</td>
-            <td><input type="text" id="apple2"></td>
-        </tr>
     </table>
 </div>
 <script>
     class Apple {
-        constructor(weight,yon) {
+        constructor(weight) {
             this.weight = weight;
-            this.yon = yon;
         }
-        setWeight () {
-            return Apple.weight -= 1;
+        reApple () {
+            return this.weight = 10;
         }
-        eat () {
-            if (Apple.weight > 0) {
-                return 
-            } else if (Apple.weight = 0) {
-                alert('Hết táo.')
+        decrease () {
+            return this.weight -=1;
+        }
+        isEmpty () {
+            if (this.weight <= 0) {
+                return false;
+            } else {
+                return true;
             }
         }
+        getWeight () {
+            return this.weight;
+        }
     }
+
     class Human {
         constructor(name,gender,weight) {
             this.name = name;
             this.gender = gender;
             this.weight = weight;
         }
-        getGender() {
-            this.gender;
-        }
-        setGender() {
-            return this.gender = prompt('Nhập giới tính')
-        }
-        checkApple(Apple) {
-            return Apple.weight;
-        }
-        eat () {
-            if (Apple.weight > 0) {
-                return Apple.weight -= 1;
-            } else if (Apple.weight = 0) {
-                alert('Hết táo.')
-            }
-        }
-        say () {
-            alert('Xin chào bạn (-.-)');
-        }
-        getName () {
+        getName() {
             return this.name;
         }
-        setName () {
-            return this.name = prompt('Nhập tên mới')
+        getGender() {
+            return this.gender;
         }
-        getWeight () {
-            this.weight;
+        getWeight() {
+            return this.weight;
         }
-        setWeight () {
-            this.weight +=1 ;
+        setWeight() {
+            return this.weight += 1;
+        }
+        say() {
+            return alert(this.name + ' Xin chào bạn');
         }
     }
 
-    let human1 = new Human('Adam','male',80);
-    let human2 = new Human('Eva','female',70);
-    let apple1 = new Apple(10,'Còn')
+    let apple = new Apple(10);
+    document.getElementById('apple1').value = apple.getWeight();
 
-    function start() {
-        document.getElementById('name1').value = human1.name;
-        document.getElementById('gender1').value = human1.gender;
-        document.getElementById('weight1').value = human1.weight;
+    let adam = new Human('Adam','male',80);
+    document.getElementById('name1').value = adam.getName();
+    document.getElementById('gender1').value = adam.getGender();
+    document.getElementById('weight1').value = adam.getWeight();
 
-        document.getElementById('name2').value = human2.name;
-        document.getElementById('gender2').value = human2.gender;
-        document.getElementById('weight2').value = human2.weight;
-
-        document.getElementById('apple1').value = apple1.weight+ ' đv';
-        document.getElementById('apple2').value = apple1.yon;
-    }
+    let eva = new Human('Eva','female',60);
+    document.getElementById('name2').value = eva.getName();
+    document.getElementById('gender2').value = eva.getGender();
+    document.getElementById('weight2').value = eva.getWeight();
 
     function adamAn() {
-        apple1.eat();
-        human1.setWeight();
-        document.getElementById('weight1').value = human1.weight;
-        document.getElementById('apple1').value = apple1.weight;
+        if ((apple.isEmpty()) == false) {
+            apple.getWeight();
+            document.getElementById('weight1').value = adam.getWeight();
+            alert('Hết táo');
+        } else {
+            document.getElementById('weight1').value = adam.setWeight();
+            document.getElementById('apple1').value = apple.decrease();
+        }
     }
+    function evaAn() {
+        if ((apple.isEmpty()) == false) {
+            apple.getWeight();
+            document.getElementById('weight2').value = eva.getWeight();
+            alert('Hết táo');
+        } else {
+            document.getElementById('weight2').value = eva.setWeight();
+            document.getElementById('apple1').value = apple.decrease();
+        }
+    }
+    function adamHai() {
+        document.getElementById('apple1').value = apple.reApple();
+    }
+    function evaHai() {
+        document.getElementById('apple1').value = apple.reApple();
+    }
+    function say1() {
+        adam.say();
+    }
+    function say2() {
+        eva.say();
+    }
+
 </script>
 </body>
 </html>
