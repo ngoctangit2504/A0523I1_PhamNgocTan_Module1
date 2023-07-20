@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu chuyện Adam and Eva</title>
+</head>
+<body>
+<h1>Câu chuyện Adam Và Eva</h1>
+<hr>
+<button onclick="start()">Bắt đầu</button>
+<div id="human">
+    <img width="200" height="200" src="https://cdn.w600.comps.canstockphoto.com/adam-eve-and-a-snake-under-an-apple-eps-vectors_csp31882235.jpg">
+    <table>
+        <tr>
+            <td>Tên :</td>
+            <td><input type="text" id="name1"></td>
+            <td><input type="text" id="name2"></td>
+        </tr>
+        <tr>
+            <td>Giới tính :</td>
+            <td><input type="text" id="gender1"></td>
+            <td><input type="text" id="gender2"></td>
+        </tr>
+        <tr>
+            <td>Cân nặng :</td>
+            <td><input type="text" id="weight1"></td>
+            <td><input type="text" id="weight2"></td>
+        </tr>
+        <tr>
+            <td>Chức năng :</td>
+            <td><button onclick="adamAn()">Adam ăn táo</button></td>
+            <td><button onclick="evaAn()">Eva ăn táo</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="adamHai()">Adam Hái táo</button></td>
+            <td><button onclick="evaHai()">Eva Hái táo</button></td>
+        </tr>
+    </table>
+</div>
+<div>
+    <img width="100" height="100" src="data:image/jpeg;base64,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">
+    <table>
+        <tr>
+            <td>Trọng lượng :</td>
+            <td><input type="text" id="apple1"></td>
+        </tr>
+        <tr>
+            <td>Táo còn hoặc táo hết :</td>
+            <td><input type="text" id="apple2"></td>
+        </tr>
+    </table>
+</div>
+<script>
+    class Apple {
+        constructor(weight,yon) {
+            this.weight = weight;
+            this.yon = yon;
+        }
+        setWeight () {
+            return Apple.weight -= 1;
+        }
+        eat () {
+            if (Apple.weight > 0) {
+                return 
+            } else if (Apple.weight = 0) {
+                alert('Hết táo.')
+            }
+        }
+    }
+    class Human {
+        constructor(name,gender,weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        getGender() {
+            this.gender;
+        }
+        setGender() {
+            return this.gender = prompt('Nhập giới tính')
+        }
+        checkApple(Apple) {
+            return Apple.weight;
+        }
+        eat () {
+            if (Apple.weight > 0) {
+                return Apple.weight -= 1;
+            } else if (Apple.weight = 0) {
+                alert('Hết táo.')
+            }
+        }
+        say () {
+            alert('Xin chào bạn (-.-)');
+        }
+        getName () {
+            return this.name;
+        }
+        setName () {
+            return this.name = prompt('Nhập tên mới')
+        }
+        getWeight () {
+            this.weight;
+        }
+        setWeight () {
+            this.weight +=1 ;
+        }
+    }
+
+    let human1 = new Human('Adam','male',80);
+    let human2 = new Human('Eva','female',70);
+    let apple1 = new Apple(10,'Còn')
+
+    function start() {
+        document.getElementById('name1').value = human1.name;
+        document.getElementById('gender1').value = human1.gender;
+        document.getElementById('weight1').value = human1.weight;
+
+        document.getElementById('name2').value = human2.name;
+        document.getElementById('gender2').value = human2.gender;
+        document.getElementById('weight2').value = human2.weight;
+
+        document.getElementById('apple1').value = apple1.weight+ ' đv';
+        document.getElementById('apple2').value = apple1.yon;
+    }
+
+    function adamAn() {
+        apple1.eat();
+        human1.setWeight();
+        document.getElementById('weight1').value = human1.weight;
+        document.getElementById('apple1').value = apple1.weight;
+    }
+</script>
+</body>
+</html>

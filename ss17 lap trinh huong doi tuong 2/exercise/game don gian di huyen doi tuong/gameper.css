@@ -1,0 +1,16 @@
+#container {
+    width: 600px;
+    height: 500px;
+    background: yellowgreen;
+    position: relative;
+}
+#hero {
+    width: 155px;
+    height: 155px;
+    background: red;
+    position: absolute;
+}
+img {
+    width: 150px;
+    height: 150px;
+}
