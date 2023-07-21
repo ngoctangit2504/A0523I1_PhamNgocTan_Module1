@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lamp</title>
+</head>
+<body>
+<h1>
+    Phát triển chương trình thể hiện sự tương tác giữa hai đối tượng:
+    công tắc và bóng đèn.
+</h1>
+<hr>
+<button onclick="tick()">Bấm</button>
+<br><br>
+<img height="200" width="200" src="https://media.istockphoto.com/id/1363794924/vi/vec-to/bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-vector-b%C3%B3ng-%C4%91%C3%A8n-n%C4%83ng-l%C6%B0%E1%BB%A3ng-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-%C3%A1nh-s%C3%A1ng-b%C3%B3ng-%C4%91%C3%A8n-%C3%A1nh-s%C3%A1ng-tr%E1%BA%AFng-vector.jpg?s=1024x1024&w=is&k=20&c=Lwm0cf6b8LC6-nUTVSBSgrbkxe01pBkVPXkNJcU33kA="
+     id="myImage">
+
+<script>
+
+    class SwitchButton {
+        constructor(status,lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+        SwitchButton(a) {
+            if (a == 1) {
+                return this.switchOn();
+            } else if (a == 0 ) {
+                return this.switchOff();
+            }
+        };
+        connectToLamp(ElectricLamp) {
+            this.lamp = ElectricLamp;
+        };
+        switchOff() {
+            this.lamp.turnOff()
+            return this.status = false;
+        };
+        switchOn() {
+            this.lamp.turnOn()
+            return this.status = true;
+        };
+    }
+
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+        ElectricLamp() {
+            if ( this.status = false) {
+                return this.turnOff();
+            } else if (this.status = true) {
+                return this.turnOn();
+            }
+        };
+        turnOff() {
+            let image = document.getElementById('myImage');
+            return image.src = "https://media.istockphoto.com/id/1363794924/vi/vec-to/bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-vector-b%C3%B3ng-%C4%91%C3%A8n-n%C4%83ng-l%C6%B0%E1%BB%A3ng-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-%C3%A1nh-s%C3%A1ng-b%C3%B3ng-%C4%91%C3%A8n-%C3%A1nh-s%C3%A1ng-tr%E1%BA%AFng-vector.jpg?s=1024x1024&w=is&k=20&c=Lwm0cf6b8LC6-nUTVSBSgrbkxe01pBkVPXkNJcU33kA="
+        };
+        turnOn() {
+            let image = document.getElementById('myImage');
+            return image.src ="https://media.istockphoto.com/id/1149246206/vi/vec-to/b%C3%B3ng-%C4%91%C3%A8n-c%C3%B3-tia-%C4%91%C3%A8n-%C4%91i%E1%BB%87n-chi%E1%BA%BFu-s%C3%A1ng-%C3%BD-t%C6%B0%E1%BB%9Fng-s%C3%A1ng-t%E1%BA%A1o-gi%E1%BA%A3i-ph%C3%A1p-kh%C3%A1i-ni%E1%BB%87m-t%C6%B0-duy.jpg?s=612x612&w=0&k=20&c=-_wrSVeGxQfd5UyouQMZGta-l0IOkqAdvpFGV-yosrc="
+        };
+    }
+
+    function tick() {
+        let x = prompt('Nhập 1 để bật công tắc, nhập 0 để tắt công tắc.')
+        let switchButton = new SwitchButton();
+        let y = new ElectricLamp();
+        switchButton.connectToLamp(y);
+        if (x == 1) {
+            switchButton.switchOn();
+        } else if (x == 0) {
+            switchButton.switchOff();
+        }
+    }
+
+</script>
+</body>
+</html>
