@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<h3>Chọn đồ uống theo số thứ tự mà bạn muốn.</h3>
+<p>1. Cafe.</p>
+<p>2. Cam vắt.</p>
+<p>3. Nước ép cà rốt.</p>
+<p>4. Nước ép cà chua.</p>
+<p>5. Nước lọc.</p>
+<p>6. Nước dừa.</p>
+<p>7. Thoát gọi món.</p>
+<hr>
+<button onclick="goiMon()">Gọi món</button>
+<script>
+    let arr = ['Cafe','Cam vắt','Nước ép cà rốt','Nước ép cà chua','Nước lọc', 'Nước dừa'];
+  function goiMon() {
+      let g = prompt('Nhập món theo số thứ tự mà bạn chọn.');
+      for (let i =0 ; i< arr.length; i++) {
+          if ((i+1) === g) {
+              alert('Bạn đã chọn '+(arr[i]));
+          }
+      }
+  }
+</script>
+</body>
+</html>

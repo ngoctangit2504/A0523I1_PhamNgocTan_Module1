@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<h3>
+    Xây dựng mảng b là prefix sums của mảng a cụ thể theo công thức:
+</h3>
+<p>
+    b[0]   = a[0]  <br>
+    b[1]   = a[0] + a[1]  <br>
+    b[2]   = a[0] + a[1] + a[2]   <br>
+    ...  <br>
+    b[n - 1] = a[0] + a[1] + ... + a[n - 1]  <br>
+</p>
+<hr>
+<script>
+    let n = +prompt('Nhập độ dài của mảng.');
+    let arrA = new Array(n);
+    let prefixSum = new Array(n);
+
+    for (let i=0; i<arrA.length ;i++) {
+        arrA[i] = +prompt('Nhập phần tử tại vị trí '+i);
+    }
+    document.write('Mảng A : ' + arrA +"<br>");
+
+    prefixSum[0] = arrA[0];
+    for (let j = 1; j < n; j++) {
+        prefixSum[j] = prefixSum[j - 1] + arrA[j];
+    }
+    document.write('Prefixsums: '+ prefixSum);
+</script>
+</body>
+</html>

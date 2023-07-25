@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<h3>
+    Viết chương trình kiểm tra một ký tự trong bảng chữ cái tiếng anh là nguyên âm
+    hay phụ âm. Ký tự là bất kỳ được nhập từ bàn phím. Các ký tự nguyên âm bao gồm:
+    'o', 'u', 'i', 'a', 'e' hoặc 'O', 'U', 'I', 'A', 'E'
+</h3>
+<hr>
+<button onclick="nhap()">Nhập ký tự</button>
+<p>Result:</p>
+<p id="result"></p>
+
+<script>
+    function nhap() {
+        let a = prompt('Nhập ký tự bất kỳ trong bảng chữ cái.');
+        let b;
+        switch (a) {
+            case 'o' :
+            case 'u' :
+            case 'i' :
+            case 'a' :
+            case 'e' :
+            case 'O' :
+            case 'U' :
+            case 'I' :
+            case 'A' :
+            case 'E' :
+                b = ' Nguyên âm ';
+                break;
+            default :
+                b = ' Phụ âm hoặc ký tự khác.';
+        }
+        document.getElementById('result').innerText = 'Ký tự '+a+' là : '+b;
+    }
+</script>
+</body>
+</html>

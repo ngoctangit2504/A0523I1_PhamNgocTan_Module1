@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<h3>
+    Vẽ tam giác vuông cân rỗng có chiều cao h. Ví dụ: h = 5
+</h3>
+<hr>
+
+<script>
+        let h = prompt('Nhập chiều cao.');
+        for (let i = 1; i <= h ;i++) {
+            for (let j = 1; j<= i; j++) {
+                if (j == 1|| i == j || i == h) {
+                    document.write('*');
+                } else {
+                    document.write("&nbsp ");
+                }
+            }
+            document.write('<br/>');
+        }
+</script>
+</body>
+</html>
