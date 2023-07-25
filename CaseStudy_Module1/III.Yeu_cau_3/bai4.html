@@ -16,15 +16,28 @@
 <hr>
 <button onclick="goiMon()">Gọi món</button>
 <script>
-    let arr = ['Cafe','Cam vắt','Nước ép cà rốt','Nước ép cà chua','Nước lọc', 'Nước dừa'];
-  function goiMon() {
-      let g = prompt('Nhập món theo số thứ tự mà bạn chọn.');
-      for (let i =0 ; i< arr.length; i++) {
-          if ((i+1) === g) {
-              alert('Bạn đã chọn '+(arr[i]));
-          }
-      }
-  }
+    function goiMon() {
+        let stt = [1, 2, 3, 4, 5, 6];
+        let name = ['Cafe', 'Cam vắt', 'Nước ép cà rốt', 'Nước ép cà chua', 'Nước lọc', 'Nước dừa'];
+        let price = [20.000, 25.000, 25.000, 25.000, 10.000, 25.000];
+
+        let x = 0;
+        do {
+            let a = prompt('Nhập món bạn gọi theo stt.');
+            if (a == 7) {
+                break;
+            } else {
+                for (let i = 0; i < stt.length; i++) {
+                    if (stt[i] == a) {
+                        alert('Bạn đã chọn ' + (name[i]) + ' có giá là ' + price[i] + 'VNĐ');
+                        let b = prompt('Mời bạn nhập số lượng');
+                        alert('số lượng ' + b + name[i] + ' Với tổng tiền là:' + (price[i] * b) + 'VNĐ');
+                    }
+                }
+            }
+            x++;
+        } while (x != 7);
+    }
 </script>
 </body>
 </html>
