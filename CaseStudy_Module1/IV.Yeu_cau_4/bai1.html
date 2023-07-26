@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    function main() {
+        let str = prompt('Nhập xâu kí tự');
+        console.log(chuanHoa(str));
+        console.log(find_longest_word(str));
+    }
+    main();
+
+    function chuanHoa(string) {
+
+        let sentence = string.toLowerCase().split(" ");
+        for(var i = 0; i< sentence.length; i++){
+            sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
+        }
+        return sentence.join(" ");
+    }
+
+    function find_longest_word(str)
+    {
+        var array1 = str.match(/\w[a-z]{0,}/gi);
+        var result = array1[0];
+
+        for(var x = 1 ; x < array1.length ; x++) {
+            if(result.length < array1[x].length) {
+                result = array1[x];
+            }
+        }
+        return result;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý học viên.</title>
+    <link rel="stylesheet" href="crud.css">
+</head>
+<body>
+<h3>Xây dựng hệ thống quản lý học viên CODEGYM.</h3>
+<hr>
+<table id="table1" border="1">
+    <tr>
+        <th>Mã học viên</th>
+        <td rowspan="5">
+            <input id="mhv" placeholder="mhv"><br>
+            <input id="ten" placeholder="ten"><br>
+            <input id="lop" placeholder="lop"><br>
+            <input id="email" placeholder="email"><br>
+            <input id="ngaysinh" placeholder="ngay sinh">
+        </td>
+    </tr>
+    <tr>
+        <th>Tên</th>
+    </tr>
+    <tr>
+        <th>Lớp</th>
+    </tr>
+    <tr>
+        <th>Email</th>
+    </tr>
+    <tr>
+        <th>Ngày sinh</th>
+    </tr>
+    <tr>
+        <td><p id="tb"></p></td>
+        <td><button onclick="save()">Lưu</button> <button onclick="delet()">Xóa</button></td>
+    </tr>
+</table>
+<br>
+<button onclick="add()">Thêm mới học viên.</button>
+<button onclick="update()">Sửa thông tin học viên.</button>
+<button onclick="del()">Xóa học viên.</button>
+<br><br>
+<div id="table"></div>
+
+<script>
+    class List {
+        constructor(id,ten,lop,email,ngaysinh) {
+            this._id = id;
+            this._ten = ten;
+            this._lop = lop;
+            this._email = email;
+            this._ngaysinh = ngaysinh;
+        }
+
+        get id() {
+            return this._id;
+        }
+
+        set id(value) {
+            this._id = value;
+        }
+
+        get ten() {
+            return this._ten;
+        }
+
+        set ten(value) {
+            this._ten = value;
+        }
+
+        get lop() {
+            return this._lop;
+        }
+
+        set lop(value) {
+            this._lop = value;
+        }
+
+        get email() {
+            return this._email;
+        }
+
+        set email(value) {
+            this._email = value;
+        }
+
+        get ngaysinh() {
+            return this._ngaysinh;
+        }
+
+        set ngaysinh(value) {
+            this._ngaysinh = value;
+        }
+    }
+
+    //Danh sách HV;
+    let listArr = [];
+    let hv1 = new List('HV-0001','Nguyễn Văn A','C1022G1','nguyenvana@gmail.com','01/01/2004');
+    let hv2 = new List('HV-0002','Nguyễn Văn B','C1122G1','nguyenvanb@gmail.com','02/02/2004');
+    let hv3 = new List('HV-0003','Nguyễn Văn C','C1222G1','nguyenvanc@gmail.com','03/03/2004');
+    listArr.push(hv1);
+    listArr.push(hv2);
+    listArr.push(hv3);
+    showList(listArr);
+
+    // ShowList;
+    function showList(List) {
+        let strList = '<table border="1">';
+            strList += '<tr>'+
+                         "<th>Mã học viên</th>"+
+                         '<th>Tên</th>' +
+                         "<th>Lớp</th>" +
+                         '<th>Email</th>' +
+                         '<th>Ngày sinh</th>' +
+                        '</tr>';
+
+        for (let i=0;i<List.length;i++){
+            strList += '<tr>'+
+                '<td>'+ List[i].id +'</td>'+
+                '<td>'+ List[i].ten +'</td>'+
+                '<td>'+ List[i].lop +'</td>'+
+                '<td>'+ List[i].email +'</td>'+
+                '<td>'+ List[i].ngaysinh +'</td>'+
+                    '</tr>';
+        }
+        strList += '</table>';
+        document.getElementById('table').innerHTML = strList;
+    }
+
+
+    //Thêm học viên.
+    function createHV() {
+            let mhv = document.getElementById('mhv').value;
+            let ten = document.getElementById('ten').value;
+            let lop = document.getElementById('lop').value;
+            let email = document.getElementById('email').value;
+            let ngaySinh = document.getElementById('ngaysinh').value;
+
+            let newHv = new List(mhv,ten,lop,email,ngaySinh);
+            listArr.push(newHv);
+            showList(listArr);
+
+            document.getElementById('mhv').value = '';
+            document.getElementById('ten').value = '';
+            document.getElementById('lop').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('ngaysinh').value = '';
+    }
+
+    //Sửa thông tin học viên.
+    let listUpdating = 999;
+    function updateHv() {
+        let mess = prompt('Nhập Mã học viên bạn cần sửa thông tin');
+        for (let i = 0;i < listArr.length;i++){
+            if (listArr[i].id === mess){
+                document.getElementById('mhv').value = listArr[i].id;
+                document.getElementById('ten').value = listArr[i].ten;
+                document.getElementById('lop').value = listArr[i].lop;
+                document.getElementById('email').value = listArr[i].email;
+                document.getElementById('ngaysinh').value = listArr[i].ngaysinh;
+                listUpdating = listArr[i];
+            }
+        }
+    }
+
+    //Save
+    function save() {
+        alert('Đã lưu thay đổi.');
+        let mhv = document.getElementById('mhv').value;
+        let ten = document.getElementById('ten').value;
+        let lop = document.getElementById('lop').value;
+        let email = document.getElementById('email').value;
+        let ngaysinh = document.getElementById('ngaysinh').value;
+
+        listUpdating.id = mhv;
+        listUpdating.ten = ten;
+        listUpdating.lop = lop;
+        listUpdating.email = email;
+        listUpdating.ngaysinh = ngaysinh;
+        listUpdating = 999;
+        showList(listArr);
+
+        document.getElementById('mhv').value = '';
+        document.getElementById('ten').value = '';
+        document.getElementById('lop').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('ngaysinh').value = '';
+    }
+
+    // Xóa Học Viên
+    let deletingI = 999;
+    function showDeleteHv() {
+        let mess = prompt('Nhập Mã học viên bạn cần xóa.');
+        for (let i = 0;i < listArr.length;i++){
+            if (listArr[i].id === mess){
+                document.getElementById('mhv').value = listArr[i].id;
+                document.getElementById('ten').value = listArr[i].ten;
+                document.getElementById('lop').value = listArr[i].lop;
+                document.getElementById('email').value = listArr[i].email;
+                document.getElementById('ngaysinh').value = listArr[i].ngaysinh;
+                deletingI = i;
+            }
+        }
+    }
+    //Nút xóa
+    function delet() {
+            let question = confirm('Bạn có muốn xóa học viên vừa chọn.');
+            if (question == true) {
+                listArr.splice(deletingI, 1);
+
+                showList(listArr);
+
+                document.getElementById('mhv').value = '';
+                document.getElementById('ten').value = '';
+                document.getElementById('lop').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('ngaysinh').value = '';
+                deletingI = 999;
+            } else {
+                alert('Không xóa.')
+            }
+        }
+
+    function add() {
+        createHV();
+    }
+    function update() {
+        updateHv();
+    }
+    function del() {
+        showDeleteHv();
+    }
+
+</script>
+</body>
+</html>

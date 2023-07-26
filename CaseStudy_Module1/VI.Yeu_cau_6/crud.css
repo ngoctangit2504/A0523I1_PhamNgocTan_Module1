@@ -1,0 +1,17 @@
+table {
+    border-collapse: collapse;
+    width: 90%;
+}
+#table1 {
+    width: 50%;
+    text-align: left;
+}
+button {
+    background-color: gold;
+}
+th {
+    background-color: darkkhaki;
+}
+input{
+    width: 98%;
+}
