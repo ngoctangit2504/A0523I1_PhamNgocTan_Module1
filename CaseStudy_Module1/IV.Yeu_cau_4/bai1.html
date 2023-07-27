@@ -5,18 +5,23 @@
     <title>Bài 1</title>
 </head>
 <body>
+<h3>
+    Viết một hàm chuẩn hóa xâu ký tự: biến đổi xâu ký tự thành xâu sao cho trong xâu không có 2 dấu cách liền nhau và bắt đầu mỗi từ phải in hoa. Ví dụ tRuong    TaN   HAI => Truong Tan Hai.
+    Và một hàm tìm từ dài nhất trong 1 xâu ký tự. Hàm main sử dụng các hàm này để nhập xâu ký tự từ bàn phím, in ra xâu trước và sau khi chuẩn hóa, 1 từ dài nhất trong xâu đó.
+</h3>
+<hr>
+<button onclick="main()">Run</button>
 <script>
     function main() {
         let str = prompt('Nhập xâu kí tự');
-        console.log(chuanHoa(str));
-        console.log(find_longest_word(str));
+        document.write('Xâu chuẩn hóa : '+chuanHoa(str)+'<br>');
+        document.write('Từ dài nhất trong xâu: '+find_longest_word(str));
     }
-    main();
 
     function chuanHoa(string) {
 
         let sentence = string.toLowerCase().split(" ");
-        for(var i = 0; i< sentence.length; i++){
+        for(let i = 0; i< sentence.length; i++){
             sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
         }
         return sentence.join(" ");
@@ -24,10 +29,10 @@
 
     function find_longest_word(str)
     {
-        var array1 = str.match(/\w[a-z]{0,}/gi);
-        var result = array1[0];
+        let array1 = str.match(/\w[a-z]{0,}/gi);
+        let result = array1[0];
 
-        for(var x = 1 ; x < array1.length ; x++) {
+        for(let x = 1 ; x < array1.length ; x++) {
             if(result.length < array1[x].length) {
                 result = array1[x];
             }
