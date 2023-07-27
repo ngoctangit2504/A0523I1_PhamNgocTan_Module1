@@ -16,8 +16,8 @@
 <script>
     let arrA = [1,5,6,8];
     let arrB = [1,5,2,3,6,8,];
-    let arrC = [];
-    
+    let missingValue = [];
+
     for (let i = 0; i<arrB.length; i ++){
         let find = false;
         for (let j = 0 ; j < arrA.length; j ++) {
@@ -26,10 +26,12 @@
             }
         }
         if (find == false) {
-            arrC.push(arrB[i]);
+            missingValue.push(arrB[i]);
         }
     }
-    console.log(arrC);
+    document.write('Mảng A '+arrA +'<br>');
+    document.write('Mảng B '+arrB +'<br>');
+    document.write('missingValue(A, B)' + missingValue);
 </script>
 </body>
 </html>
