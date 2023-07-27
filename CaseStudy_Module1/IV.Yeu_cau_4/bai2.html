@@ -5,8 +5,28 @@
     <title>Bài 2</title>
 </head>
 <body>
-<script>
+<h3>
+    Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó.
+</h3>
+<hr>
 
+<script>
+    let s = "cabca";
+    let arrS = [];
+    arrS = s.split('');
+    let newArrS = [];
+    let x = arrS[0];
+    let y = 0;
+
+    for (let i = 0; i < arrS.length; i++) {
+        if (arrS[i] != x) {
+            newArrS.push(arrS[i]);
+            arrS[i] = x;
+            y+=1;
+        }
+    }
+    document.write('Số kí tự khác nhau trong xâu là :'+y+'<br>');
+    document.write('Các kí tự khác nhau bao gồm: '+arrS[0]+','+newArrS);
 </script>
 </body>
 </html>
