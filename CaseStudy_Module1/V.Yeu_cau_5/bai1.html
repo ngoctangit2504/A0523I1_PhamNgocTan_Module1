@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<h3>
+    Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n.
+    Với m, n là các số nhập từ bàn phím.
+</h3>
+<hr>
+<script>
+    let m = prompt('Nhập m:');
+    let n = prompt('Nhập n:');
+    let arr = [];
+
+    for (let i = 0; i < m; i++ ){
+        let pt = [];
+        for (let j = 0; j < n; j++){
+            let value = prompt('Nhập giá trị tại [ '+i+' ]'+' [ '+j+' ]');
+            pt.push(value);
+        }
+        arr.push(pt);
+    }
+
+    function tinhTong() {
+        let evenNumber = 0;
+        let sumEvenNumber = 0;
+        for (let i = 0; i< arr.length ;i++) {
+            for (let j = 0; j < arr[i].length ; j++) {
+                if (arr[i][j] % 2 == 0) {
+                    evenNumber += 1;
+                    sumEvenNumber += +arr[i][j];
+                }
+            }
+        }
+        document.write('Mảng vừa tạo có '+evenNumber+' số chẵn.');
+        document.write('Tổng các số chẵn: '+sumEvenNumber);
+    }
+    tinhTong();
+
+</script>
+</body>
+</html>
