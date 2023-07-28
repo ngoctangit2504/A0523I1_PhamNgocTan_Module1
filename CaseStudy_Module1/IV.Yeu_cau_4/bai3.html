@@ -13,13 +13,19 @@
 <hr>
 
 <script>
-    let a = 'aabcc';
-    let b = 'adcaa';
-    let arrA = a.split('');
-    let arrB = b.split('');
+    function kiTuTrungNhau() {
 
-    let commonCharacterCount;
-
+        let a = prompt('Nhập xâu a.');
+        let b = prompt('Nhập xâu b.');
+        let kt = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (a.includes(b[i])) {
+                kt ++;
+            }
+        }
+        document.write('Số kí tự trùng trong 2 xâu là: '+kt);
+    }
+    kiTuTrungNhau();
 </script>
 </body>
 </html>
